@@ -139,7 +139,7 @@ Sử dụng Figma project để thực hành:
 
 **Figma file:** [SAA 2025 - Internal Live Coding](https://www.figma.com/design/9ypp4enmFmdK3YAFJLIu6C/SAA-2025---Internal-Live-Coding)
 
-Quy trình generate code với MoMorph (sử dụng slash commands trong AI agent):
+Quy trình đầy đủ generate code với MoMorph (sử dụng slash commands trong AI agent):
 
 1. **`/momorph.constitution`** — Khởi tạo coding standards và conventions cho project
 2. **`/momorph.specify`** — Sinh specification từ Figma frame (spec.md + design-style.md)
@@ -149,12 +149,65 @@ Quy trình generate code với MoMorph (sử dụng slash commands trong AI agen
 6. **`/momorph.tasks`** — Chia nhỏ plan thành danh sách task thực thi
 7. **`/momorph.implement`** — Thực thi tasks, sinh code theo design
 
-Ví dụ lệnh:
+> **Lưu ý cho bài thực hành này:** Specs (bước 2, 3) của các màn hình trong Figma file đã được tạo sẵn trên MoMorph server. Vì vậy trong buổi thực hành, các bạn có thể **bắt đầu từ bước 1 (constitution) rồi nhảy thẳng sang bước 4 (plan)**. Bước specify và reviewspecify chỉ cần thực hiện khi bạn muốn tạo spec cho một màn hình mới chưa có sẵn.
+
+#### Ví dụ prompt cho từng command
+
+**1. `/momorph.constitution`** — Sinh coding standards cho project:
+
+```
+/momorph.constitution
+Generate constitution
+```
+
+**2. `/momorph.specify`** — Sinh spec từ Figma frame _(đã có sẵn, có thể skip)_:
 
 ```
 /momorph.specify
 Build specifications for project based on the following Figma design items:
-1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: <frame-id>
+1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: 9276:19531
+```
+
+**3. `/momorph.reviewspecify`** — Review spec đã sinh _(đã có sẵn, có thể skip)_:
+
+```
+/momorph.reviewspecify
+1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: 9276:19531
+```
+
+> Nên chạy lệnh này 2–3 lần để spec được review kỹ hơn.
+
+**4. `/momorph.plan`** — Tạo implementation plan:
+
+```
+/momorph.plan
+Plan for the following Figma design items:
+1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: 9276:19531
+```
+
+**5. `/momorph.reviewplan`** — Review plan đã sinh:
+
+```
+/momorph.reviewplan
+1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: 9276:19531
+```
+
+> Nên chạy lệnh này 2–3 lần để plan được review kỹ hơn.
+
+**6. `/momorph.tasks`** — Chia plan thành danh sách tasks:
+
+```
+/momorph.tasks
+Break tasks for the following Figma design items:
+1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: 9276:19531
+```
+
+**7. `/momorph.implement`** — Thực thi tasks, sinh code:
+
+```
+/momorph.implement
+Execute the implementation plan by processing and executing all tasks defined for the following Figma design items:
+1. Signin – fileKey: 9ypp4enmFmdK3YAFJLIu6C, frameId: 9276:19531
 ```
 
 ### Bước 10: Chạy development server
