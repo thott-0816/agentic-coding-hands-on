@@ -29,9 +29,10 @@ sync-supabase-env:
 	API_URL=$$(echo "$$STATUS" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(JSON.parse(d).API_URL))"); \
 	PUBLISHABLE_KEY=$$(echo "$$STATUS" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(JSON.parse(d).PUBLISHABLE_KEY))"); \
 	SECRET_KEY=$$(echo "$$STATUS" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(JSON.parse(d).SECRET_KEY))"); \
-	sed -i '' "s|^NEXT_PUBLIC_SUPABASE_URL=.*|NEXT_PUBLIC_SUPABASE_URL=$$API_URL|" .env.development; \
-	sed -i '' "s|^NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=.*|NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=$$PUBLISHABLE_KEY|" .env.development; \
-	sed -i '' "s|^SUPABASE_SECRET_KEY=.*|SUPABASE_SECRET_KEY=$$SECRET_KEY|" .env.development; \
+	sed -i.bak "s|^NEXT_PUBLIC_SUPABASE_URL=.*|NEXT_PUBLIC_SUPABASE_URL=$$API_URL|" .env.development; \
+	sed -i.bak "s|^NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=.*|NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=$$PUBLISHABLE_KEY|" .env.development; \
+	sed -i.bak "s|^SUPABASE_SECRET_KEY=.*|SUPABASE_SECRET_KEY=$$SECRET_KEY|" .env.development; \
+	rm -f .env.development.bak; \
 	echo "Updated .env.development:"; \
 	echo "  NEXT_PUBLIC_SUPABASE_URL=$$API_URL"; \
 	echo "  NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=$$PUBLISHABLE_KEY"; \
