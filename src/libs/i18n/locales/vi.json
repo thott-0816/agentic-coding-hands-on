@@ -1,0 +1,18 @@
+{
+  "login.hero.description.line1.before": "Bắt đầu hành trình của bạn cùng ",
+  "login.hero.description.line1.highlight": "SAA 2025",
+  "login.hero.description.line1.after": ".",
+  "login.hero.description.line2": "Đăng nhập để khám phá!",
+  "login.button.loginWithGoogle": "ĐĂNG NHẬP với Google",
+  "login.button.ariaLabel": "Đăng nhập bằng Google",
+  "login.button.loading": "Đang tải...",
+  "login.error.cancelled": "Đăng nhập đã bị hủy. Vui lòng thử lại.",
+  "login.error.failed": "Đăng nhập thất bại. Vui lòng thử lại sau.",
+  "login.error.network": "Không có kết nối mạng. Vui lòng kiểm tra và thử lại.",
+  "login.error.unauthorized": "Tài khoản Google này không được phép truy cập.",
+  "login.error.serviceUnavailable": "Hệ thống đang bảo trì. Vui lòng quay lại sau.",
+  "common.header.language.vi": "VN",
+  "common.header.language.en": "EN",
+  "common.header.language.ariaLabel": "Chọn ngôn ngữ",
+  "common.footer.copyright": "Bản quyền thuộc về Sun* © 2025"
+}

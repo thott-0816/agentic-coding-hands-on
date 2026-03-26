@@ -1,0 +1,18 @@
+{
+  "login.hero.description.line1.before": "Start your journey with ",
+  "login.hero.description.line1.highlight": "SAA 2025",
+  "login.hero.description.line1.after": ".",
+  "login.hero.description.line2": "Login to explore!",
+  "login.button.loginWithGoogle": "LOGIN With Google",
+  "login.button.ariaLabel": "Sign in with Google",
+  "login.button.loading": "Loading...",
+  "login.error.cancelled": "Login was cancelled. Please try again.",
+  "login.error.failed": "Login failed. Please try again later.",
+  "login.error.network": "No internet connection. Please check and try again.",
+  "login.error.unauthorized": "This Google account is not authorized.",
+  "login.error.serviceUnavailable": "System is under maintenance. Please come back later.",
+  "common.header.language.vi": "VN",
+  "common.header.language.en": "EN",
+  "common.header.language.ariaLabel": "Select language",
+  "common.footer.copyright": "Copyright belongs to Sun* © 2025"
+}
