@@ -24,7 +24,7 @@ export function Header({ dictionary, locale, variant = "simple", activeLink }: H
     <header className="fixed top-0 z-50 flex h-20 w-full items-center justify-between bg-[var(--color-header-bg)] px-[var(--spacing-header-x)] py-[var(--spacing-header-y)] backdrop-blur-xl max-md:h-16 max-md:px-4 md:max-lg:px-12">
       {/* Left: Logo + Nav Links */}
       <div className="flex items-center gap-16">
-        <Link href="/">
+        <Link href="/countdown">
           <Image
             src="/images/saa-logo.png"
             alt="Sun Annual Awards 2025"

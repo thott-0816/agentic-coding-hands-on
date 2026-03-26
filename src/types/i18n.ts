@@ -46,6 +46,7 @@ export type TranslationKey =
   | "homepage.content.quote"
   | "homepage.content.quoteSource"
   | "homepage.content.p4"
-  | "homepage.content.p5";
+  | "homepage.content.p5"
+  | "countdown.title";
 
 export type Dictionary = Record<TranslationKey, string>;
