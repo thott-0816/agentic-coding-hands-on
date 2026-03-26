@@ -12,9 +12,9 @@
   --color-footer-border: #2E3940;
 
   /* Spacing */
-  --spacing-page-x: max(180px, 15vw);
+  --spacing-page-x: max(164px, 10vw);
   --spacing-page-y: 96px;
-  --spacing-header-x: max(180px, 15vw);
+  --spacing-header-x: max(164px, 10vw);
   --spacing-header-y: 12px;
   --spacing-hero-gap: 80px;
   --spacing-content-gap: 24px;
@@ -22,6 +22,13 @@
   --spacing-btn-y: 16px;
   --spacing-footer-x: 90px;
   --spacing-footer-y: 40px;
+
+  /* Homepage */
+  --color-countdown-bg: #0D1B24;
+  --color-section-bg: #00070C;
+  --color-kudos-bg: #0A1A24;
+  --color-card-border: #998C5F;
+  --color-text-gold: #FFEA9E;
 
   /* Radius */
   --radius-btn: 8px;
@@ -40,6 +47,24 @@
   --color-btn-login-text: var(--color-btn-login-text);
   --color-text-white: var(--color-text-white);
   --color-footer-border: var(--color-footer-border);
+}
+
+/* 2xl+: 1.5x page padding */
+@media (min-width: 1536px) {
+  :root {
+    --spacing-page-x: max(246px, 15vw);
+    --spacing-header-x: max(246px, 15vw);
+    --spacing-footer-x: 135px;
+  }
+}
+
+/* lg to xl: halve page padding */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root {
+    --spacing-page-x: max(82px, 5vw);
+    --spacing-header-x: max(82px, 5vw);
+    --spacing-footer-x: 45px;
+  }
 }
 
 body {

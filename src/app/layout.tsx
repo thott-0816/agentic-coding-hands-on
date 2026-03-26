@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Montserrat_Alternates } from "next/font/google";
+import { Montserrat, Montserrat_Alternates, Orbitron } from "next/font/google";
 import { cookies } from "next/headers";
 import type { Locale } from "@/types/i18n";
 import "./globals.css";
@@ -9,6 +9,12 @@ const montserrat = Montserrat({
   subsets: ["latin", "vietnamese"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
+});
+
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 const montserratAlternates = Montserrat_Alternates({
@@ -36,7 +42,7 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body
-        className={`${montserrat.variable} ${montserratAlternates.variable} antialiased`}
+        className={`${montserrat.variable} ${montserratAlternates.variable} ${orbitron.variable} antialiased`}
       >
         {children}
       </body>
