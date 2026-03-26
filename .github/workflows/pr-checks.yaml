@@ -32,6 +32,9 @@ jobs:
       - name: Run ESLint
         run: yarn lint
 
+      - name: Run unit tests
+        run: yarn test
+
       - name: Build application
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL || 'https://example.supabase.co' }}
