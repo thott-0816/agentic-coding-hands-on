@@ -47,6 +47,16 @@ export type TranslationKey =
   | "homepage.content.quoteSource"
   | "homepage.content.p4"
   | "homepage.content.p5"
-  | "countdown.title";
+  | "countdown.title"
+  | "awards.page.subtitle"
+  | "awards.page.title"
+  | "awards.quantity.label"
+  | "awards.prize.label"
+  | "awards.unit.individual"
+  | "awards.unit.team"
+  | "awards.unit.unit"
+  | "awards.prize.perAward"
+  | "awards.prize.individual"
+  | "awards.prize.team";
 
 export type Dictionary = Record<TranslationKey, string>;

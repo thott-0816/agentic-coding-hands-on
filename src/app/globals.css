@@ -58,12 +58,12 @@
   }
 }
 
-/* lg to xl: halve page padding */
+/* lg to xl: reduce page padding */
 @media (min-width: 1024px) and (max-width: 1279px) {
   :root {
-    --spacing-page-x: max(82px, 5vw);
-    --spacing-header-x: max(82px, 5vw);
-    --spacing-footer-x: 45px;
+    --spacing-page-x: 120px;
+    --spacing-header-x: 120px;
+    --spacing-footer-x: 60px;
   }
 }
 

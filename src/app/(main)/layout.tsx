@@ -1,7 +1,6 @@
 import { cookies } from "next/headers";
 import { getLocale, getDictionary } from "@/libs/i18n/config";
-import { Header } from "@/components/common/header";
-import { Footer } from "@/components/common/footer";
+import { ActiveHeader, ActiveFooter } from "@/components/common/active-link-provider";
 import { WidgetButton } from "@/components/common/widget-button";
 
 export default async function MainLayout({
@@ -15,9 +14,9 @@ export default async function MainLayout({
 
   return (
     <>
-      <Header dictionary={dictionary} locale={locale} variant="full" activeLink="/" />
+      <ActiveHeader dictionary={dictionary} locale={locale} variant="full" />
       {children}
-      <Footer dictionary={dictionary} variant="full" />
+      <ActiveFooter dictionary={dictionary} variant="full" />
       <WidgetButton dictionary={dictionary} />
     </>
   );
