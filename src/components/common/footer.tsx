@@ -5,6 +5,7 @@ import type { Dictionary } from "@/types/i18n";
 interface FooterProps {
   dictionary: Dictionary;
   variant?: "simple" | "full";
+  activeLink?: string;
 }
 
 const FOOTER_LINKS = [
@@ -14,7 +15,7 @@ const FOOTER_LINKS = [
   { href: "/community-standards", label: "Tiêu chuẩn chung" },
 ];
 
-export function Footer({ dictionary, variant = "simple" }: FooterProps) {
+export function Footer({ dictionary, variant = "simple", activeLink }: FooterProps) {
   if (variant === "simple") {
     return (
       <footer className="absolute bottom-0 z-10 flex h-[74px] w-full items-center justify-center border-t border-[var(--color-footer-border)] px-[var(--spacing-page-x)] max-md:px-4 md:max-lg:px-12">
@@ -40,15 +41,23 @@ export function Footer({ dictionary, variant = "simple" }: FooterProps) {
 
       {/* Nav Links - hidden below xl */}
       <nav className="hidden items-center gap-8 xl:flex">
-        {FOOTER_LINKS.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="font-sans text-sm font-normal text-white/70 transition-colors hover:text-[var(--color-text-gold)]"
-          >
-            {link.label}
-          </Link>
-        ))}
+        {FOOTER_LINKS.map((link) => {
+          const isActive = activeLink === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={isActive ? "page" : undefined}
+              className={`font-sans text-sm font-normal transition-colors ${
+                isActive
+                  ? "text-[var(--color-text-gold)]"
+                  : "text-white/70 hover:text-[var(--color-text-gold)]"
+              }`}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
       </nav>
 
       {/* Copyright */}

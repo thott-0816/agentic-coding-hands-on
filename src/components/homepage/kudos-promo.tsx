@@ -5,11 +5,12 @@ import type { Dictionary } from "@/types/i18n";
 
 interface KudosPromoProps {
   dictionary: Dictionary;
+  className?: string;
 }
 
-export function KudosPromo({ dictionary }: KudosPromoProps) {
+export function KudosPromo({ dictionary, className }: KudosPromoProps) {
   return (
-    <section className="mx-[var(--spacing-page-x)] max-md:mx-4 md:max-lg:mx-12">
+    <section className={className ?? "mx-[var(--spacing-page-x)] max-md:mx-4 md:max-lg:mx-12"}>
       <div className="relative overflow-hidden rounded-xl bg-[var(--color-kudos-bg)]">
         {/* Background illustration */}
         <Image
@@ -26,10 +27,10 @@ export function KudosPromo({ dictionary }: KudosPromoProps) {
           {/* Text content - left */}
           <div className="flex max-w-[500px] flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <p className="font-sans text-sm font-normal leading-5 text-white">
+              <p className="font-sans text-2xl font-normal leading-8 text-white max-md:text-base">
                 {dictionary["homepage.kudos.label"]}
               </p>
-              <h2 className="font-sans text-[32px] font-bold leading-10 text-[var(--color-text-gold)] max-md:text-2xl">
+              <h2 className="font-sans text-[57px] font-normal leading-[64px] tracking-[-0.25px] text-[var(--color-text-gold)] max-md:text-3xl">
                 {dictionary["homepage.kudos.title"]}
               </h2>
               <p

@@ -46,7 +46,7 @@ export function Header({ dictionary, locale, variant = "simple", activeLink }: H
                   aria-current={isActive ? "page" : undefined}
                   className={`rounded px-4 py-2 font-sans text-base font-normal leading-6 tracking-[0.15px] transition-colors ${
                     isActive
-                      ? "text-[var(--color-text-gold)] underline underline-offset-4 decoration-2"
+                      ? "text-[var(--color-text-gold)] underline decoration-[var(--color-text-gold)] decoration-2 underline-offset-[12px]"
                       : "text-white hover:bg-white/10 hover:text-[var(--color-text-gold)]"
                   }`}
                 >
