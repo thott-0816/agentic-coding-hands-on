@@ -30,6 +30,11 @@
   --color-card-border: #998C5F;
   --color-text-gold: #FFEA9E;
 
+  /* Kudos */
+  --color-heart-active: #EF4444;
+  --color-heart-inactive: #6B7280;
+  --color-hashtag-bg: rgba(255, 234, 158, 0.2);
+
   /* Radius */
   --radius-btn: 8px;
   --radius-lang-btn: 4px;
@@ -71,6 +76,22 @@ body {
   font-family: var(--font-montserrat), sans-serif;
   background: var(--color-bg-primary);
   color: var(--color-text-white);
+}
+
+/* Custom scrollbar — thin gold, for filter dropdowns */
+.kudos-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.kudos-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.kudos-scrollbar::-webkit-scrollbar-thumb {
+  background: #FFEA9E;
+  border-radius: 4px;
+}
+.kudos-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #FFEA9E transparent;
 }
 
 @keyframes fadeIn {
