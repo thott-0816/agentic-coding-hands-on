@@ -45,9 +45,14 @@ TDD là KHÔNG THƯƠNG LƯỢNG cho mọi tính năng:
   2. Viết code tối thiểu để test pass
   3. Refactor trong khi giữ test xanh
 - Unit test cho tất cả utility functions, hooks và business logic
+- Unit test cho tất cả UI components (bao gồm cả components render-only)
 - Integration test cho API routes và tương tác với Supabase
 - Mỗi user story PHẢI có acceptance test được định nghĩa trước khi implement
 - Test PHẢI được đặt trong thư mục `__tests__/` cùng cấp với source code, hoặc trong `tests/` ở root cho integration/e2e
+- **Test enforcement khi sửa code**: Mọi thay đổi code (implement mới, sửa bug, refactor) PHẢI đảm bảo:
+  1. File đang sửa ĐÃ CÓ unit test. Nếu chưa có → viết test trước hoặc cùng lúc
+  2. Chạy `npx vitest run` sau khi sửa → tất cả test PHẢI pass
+  3. Không được merge/commit code mà test đang fail
 
 ### III. Responsive Design
 
